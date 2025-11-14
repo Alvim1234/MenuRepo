@@ -1,4 +1,7 @@
 package rato;
+
+import java.util.Scanner;
+
 public class ClassePrincipal {
 	public static void limparTela() {
 	    try {
@@ -14,6 +17,36 @@ public class ClassePrincipal {
     }
 	public static void main(String[] args) {
 
+		Scanner sc = new Scanner(System.in);
+		
+		int opcao;
+		
+		do{
+			limparTela();
+			System.out.println("MENU DE OPÇÃO"); 
+			System.out.println("[1] Adicionar um aluno"); 
+			System.out.println("[2] Excluir um aluno"); 
+			System.out.println("[3] Ver alunos"); 
+			System.out.println("[4] SAIR"); 
+
+			opcao = sc.nextInt();
+			sc.nextLine();
+			
+			limparTela();
+			
+			switch(opcao){
+			
+			case 1:
+				System.out.println("Selecionada opção 1");
+			case 2:
+				System.out.println("Selecionada opção 2");
+			case 3:
+				System.out.println("Selecionada opção 3");
+			default:
+				System.out.println("Opção padrão");
+			}
+			
+		} while(opcao != 4);
 	}
 
 }
